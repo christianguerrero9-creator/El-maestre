@@ -351,6 +351,12 @@ h2 {
     font-family: 'Cinzel', serif;
 }
 
+.valyrio {
+    font-style: italic;
+    color: #8a1c1c;
+    font-weight: bold;
+}
+
 /* === FONDO ÉPICO ANIMADO === */
 
 /* 1. El contenedor del fondo */
@@ -403,10 +409,4 @@ body {
     background-color: rgba(26, 26, 26, 0.8) !important; /* Gris oscuro semitransparente */
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.valyrio {
-    font-style: italic;
-    color: #8a1c1c;
-    font-weight: bold;
 }

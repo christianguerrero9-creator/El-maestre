@@ -1,4 +1,4 @@
-const CACHE_NAME = 'grimorio-v1';
+const CACHE_NAME = 'grimorio-v2';
 const urlsToCache = [
   './',
   './index.html',

@@ -1,0 +1,258 @@
+/* Importar fuentes estilo medieval moderno */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #0d0d0d;
+    --card-bg: #1a1a1a;
+    --accent-gold: #c5a059; /* Dorado viejo */
+    --accent-red: #8a1c1c;  /* Rojo sangre/fuego */
+    --text-main: #e0e0e0;
+    --text-muted: #888888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 80px; /* Espacio para el menú inferior */
+}
+
+/* Encabezado */
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #000, transparent);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.brand {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+/* Títulos */
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.seccion-app {
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === GRIMORIOS (Scroll Horizontal) === */
+.scroll-horizontal {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.book-card {
+    min-width: 160px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.book-cover {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.tag {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: var(--accent-red);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+}
+
+.book-card h3 {
+    font-size: 0.9rem;
+    color: var(--accent-gold);
+    margin-bottom: 5px;
+}
+
+.btn-leer {
+    width: 100%;
+    padding: 8px;
+    background-color: transparent;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Lista de Artículos */
+.article-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.icon-box {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* === PODCAST === */
+.podcast-player {
+    background: linear-gradient(45deg, #2c0b0b, #1a1a1a);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+}
+
+.disc-art {
+    width: 80px;
+    height: 80px;
+    background-color: #000;
+    border-radius: 5px;
+    background-image: url('https://images.unsplash.com/photo-1478737270239-2f02b77ac6d5?q=80&w=800'); /* Imagen genérica audio */
+    background-size: cover;
+}
+
+.play-btn {
+    background-color: var(--accent-gold);
+    border: none;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.mini-play {
+    background: none;
+    border: 1px solid #555;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* === VIDEOS === */
+.video-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.video-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.thumbnail {
+    height: 180px;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    opacity: 0.6;
+}
+
+.play-icon {
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    z-index: 10;
+    text-shadow: 0 0 10px black;
+}
+
+.video-card h3 {
+    padding: 15px;
+    font-size: 1rem;
+}
+
+/* === MENÚ INFERIOR (ESTILO APP) === */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 1px solid #333;
+    z-index: 100;
+}
+
+.nav-item {
+    color: var(--text-muted);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.nav-item i {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.nav-item.active {
+    color: var(--accent-gold);
+}

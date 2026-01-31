@@ -17,10 +17,10 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
+    background-color: #050505; /* Negro casi puro */
+    color: #e0e0e0; /* Texto claro */
+    margin: 0;
     font-family: 'Lato', sans-serif;
-    padding-bottom: 80px; /* Espacio para el menú inferior */
 }
 
 /* Encabezado */

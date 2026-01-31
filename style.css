@@ -351,6 +351,60 @@ h2 {
     font-family: 'Cinzel', serif;
 }
 
+/* === FONDO ÉPICO ANIMADO === */
+
+/* 1. El contenedor del fondo */
+.fondo-epico {
+    position: fixed; /* Se queda fijo aunque hagas scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Se pone DETRÁS de todo el contenido */
+    
+    /* LA IMAGEN (Cámbiala aquí si quieres otra) */
+    background-image: url('https://images.unsplash.com/photo-1635322966219-b75ed372eb01?q=80&w=1964&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    
+    /* Capa oscura encima para que el texto se lea bien */
+    filter: brightness(0.4); 
+
+    /* LA ANIMACIÓN (Efecto Ken Burns) */
+    animation: movimientoEpico 30s infinite alternate ease-in-out;
+}
+
+/* 2. Definir cómo se mueve */
+@keyframes movimientoEpico {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    100% {
+        transform: scale(1.2) translate(-2%, 1%); /* Zoom lento y ligero movimiento lateral */
+    }
+}
+
+/* === HACER TRANSPARENTES LOS ELEMENTOS EXISTENTES === */
+
+/* Hacemos el header y el menú de abajo semitransparentes con efecto "vidrio" */
+header, .bottom-nav {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Negro al 70% de opacidad */
+    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado (muy pro) */
+    border-top: 1px solid rgba(197, 160, 89, 0.3); /* Borde dorado sutil */
+}
+
+/* Quitamos el fondo negro sólido de la app en general */
+body {
+    background-color: transparent !important;
+}
+
+/* Hacemos las tarjetas de los libros y videos un poco transparentes */
+.book-card, .video-card, .article-item, #podcast div {
+    background-color: rgba(26, 26, 26, 0.8) !important; /* Gris oscuro semitransparente */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .valyrio {
     font-style: italic;
     color: #8a1c1c;
